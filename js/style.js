@@ -67,7 +67,7 @@ getAllGroomData();
 
 function getUserDetailsWelcome(uesrId) {
    var url = "http://asvtbangalore.com/ASVT/API/index.php?q=getUserData&clientid=" + userId;
-     var url = "dummy/exampleuser.json"
+    // var url = "dummy/exampleuser.json"
    $.get(url,function (data,status) {
       if (data["status"] == "success") {
          var name = data["data"]["value"][0]["name"];
@@ -84,9 +84,9 @@ loginTime.text(date.toLocaleString('en-US'));
 
 
 function getAllGroomData(uesrId) {
-   //var url = "http://asvtbangalore.com/ASVT/API/index.php?q=getAllGroomData";
+   var url = "http://asvtbangalore.com/ASVT/API/index.php?q=getAllGroomData";
    
-   var url = "dummy/bride.json"
+   //var url = "dummy/bride.json"
    $.get(url,function (data,status) {
       if (data["status"] == "success") {
          setAlllist(data);
